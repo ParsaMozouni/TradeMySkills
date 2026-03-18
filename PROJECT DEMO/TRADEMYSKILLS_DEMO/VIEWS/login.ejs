@@ -1,0 +1,24 @@
+<%- include('partials/header', { title: 'Login' }) %>
+<section class="auth-page">
+  <div class="container py-5 d-flex justify-content-center">
+    <div class="auth-card-lg">
+      <div class="text-center mb-4">
+        <p class="eyebrow mb-2">Welcome back</p>
+        <h2 class="fw-bold">Login to TradeMySkills</h2>
+      </div>
+      <form action="/dashboard">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control form-control-lg" placeholder="name@email.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control form-control-lg" placeholder="Enter password" required>
+        </div>
+        <button class="btn btn-brand w-100 btn-lg">Login</button>
+      </form>
+      <p class="text-center text-secondary mt-3 mb-0">No account yet? <a href="/register">Create one</a></p>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>

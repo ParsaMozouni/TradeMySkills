@@ -1,0 +1,38 @@
+<%- include('partials/header', { title: 'Register' }) %>
+<section class="auth-page">
+  <div class="container py-5 d-flex justify-content-center">
+    <div class="auth-card-lg">
+      <div class="text-center mb-4">
+        <p class="eyebrow mb-2">Join the community</p>
+        <h2 class="fw-bold">Create your account</h2>
+      </div>
+      <form action="/dashboard">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">First Name</label>
+            <input class="form-control form-control-lg" placeholder="First name" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Last Name</label>
+            <input class="form-control form-control-lg" placeholder="Last name" required>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control form-control-lg" placeholder="name@email.com" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Create password" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Primary Skill</label>
+            <input class="form-control form-control-lg" placeholder="Ex: Guitar, HTML, Resume Help">
+          </div>
+        </div>
+        <button class="btn btn-brand w-100 btn-lg mt-4">Sign Up</button>
+      </form>
+      <p class="text-center text-secondary mt-3 mb-0">Already have an account? <a href="/login">Login</a></p>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>

@@ -1,0 +1,37 @@
+<%- include('partials/header', { title: 'Messages' }) %>
+<section class="container-fluid py-4 px-4">
+  <div class="message-layout">
+    <aside class="message-sidebar">
+      <h5 class="fw-bold mb-3">Inbox</h5>
+      <% messages.forEach(message => { %>
+        <div class="message-preview active-preview">
+          <div class="avatar-circle"><%= message.from.charAt(0) %></div>
+          <div>
+            <strong><%= message.from %></strong>
+            <p class="mb-0 text-secondary small"><%= message.preview %></p>
+          </div>
+          <span class="small text-muted"><%= message.time %></span>
+        </div>
+      <% }) %>
+    </aside>
+    <main class="chat-panel">
+      <div class="chat-header">
+        <div>
+          <h5 class="fw-bold mb-0">Ava Chen</h5>
+          <small class="text-secondary">Python Tutoring trade</small>
+        </div>
+        <a href="/skills/1" class="btn btn-brand-sm">View skill</a>
+      </div>
+      <div class="chat-body">
+        <div class="bubble bubble-left">Hi! I saw your interest in Python tutoring.</div>
+        <div class="bubble bubble-right">Nice! I can trade some design help in return.</div>
+        <div class="bubble bubble-left">That works. Are you free this weekend?</div>
+      </div>
+      <form class="chat-input-row">
+        <input class="form-control form-control-lg" placeholder="Type a message...">
+        <button class="btn btn-brand">Send</button>
+      </form>
+    </main>
+  </div>
+</section>
+<%- include('partials/footer') %>

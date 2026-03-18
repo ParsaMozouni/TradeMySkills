@@ -1,0 +1,41 @@
+<%- include('partials/header', { title: 'Post Skill' }) %>
+<section class="container py-5">
+  <div class="form-shell mx-auto">
+    <div class="mb-4 text-center">
+      <p class="eyebrow mb-2">Create listing</p>
+      <h2 class="fw-bold">Post a new skill</h2>
+    </div>
+    <form action="/skills/new" method="POST">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Skill title</label>
+          <input name="title" class="form-control form-control-lg" placeholder="Ex: Basic Web Design" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Category</label>
+          <select name="category" class="form-select form-select-lg">
+            <option>Technology</option>
+            <option>Creative</option>
+            <option>Music</option>
+            <option>Career</option>
+            <option>Health</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Description</label>
+          <textarea name="description" class="form-control" rows="4" placeholder="Describe the skill you are offering"></textarea>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">What can you offer?</label>
+          <input name="offer" class="form-control form-control-lg" placeholder="What you can teach or do">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">What do you want in return?</label>
+          <input name="want" class="form-control form-control-lg" placeholder="Skill you want to learn">
+        </div>
+      </div>
+      <button class="btn btn-brand btn-lg mt-4 w-100">Post Skill</button>
+    </form>
+  </div>
+</section>
+<%- include('partials/footer') %>
